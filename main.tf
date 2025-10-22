@@ -21,18 +21,3 @@ module "demo" {
   virtual_networks = var.virtual_networks
   tags = var.tags
 }
-
-moved {
-  from = azurerm_resource_group.demo
-  to   = module.demo.azurerm_resource_group.demo
-}
-
-moved {
-  from = azurerm_virtual_network.demo
-  to   = module.demo.azurerm_virtual_network.demo
-}
-
-moved {
-  from = azurerm_subnet.demo
-  to   = module.demo.azurerm_subnet.demo
-}
